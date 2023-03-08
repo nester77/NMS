@@ -37,14 +37,14 @@ public class Task {
     private LocalDateTime createTime;
 
     @OneToOne(cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "creator_id")
     private User creator;
 
     @Column(name = "description")
     private String description;
 
     @OneToOne(cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "executor_id")
     private User executor;
 
     @Column(name = "end_time")

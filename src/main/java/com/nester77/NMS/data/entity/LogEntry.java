@@ -33,7 +33,7 @@ public class LogEntry {
     private Long id;
 
     @OneToOne(cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "creator_id")
     private User creator;
 
     @OneToMany(cascade = {CascadeType.REFRESH, CascadeType.PERSIST, CascadeType.REMOVE})
@@ -51,7 +51,7 @@ public class LogEntry {
 
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
-    private Task.Status status;
+    private Status status;
 
     public enum Status {
         PROCESSING, COMMENT, DONE, DONE_PREPARATION

@@ -35,6 +35,9 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @Column(name = "is_active")
+    private boolean isActive;
+
     public enum Role {
         USER, ADMIN
     }
